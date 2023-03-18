@@ -1,0 +1,15 @@
+[package]
+name = "eth_minter"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+web3 = "0.17.0"
+tokio = { version= "1", features = ["full"] }
+dotenv = "0.15.0"
+secp256k1 = "0.20.3"
+futures = "0.3.25"
+gstuff = "0.8.10"
+ethabi = "18.0.0"
