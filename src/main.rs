@@ -60,7 +60,7 @@ async fn main() -> web3::Result<()> {
 
     let signed_trans = get_signed_transactions(addresses, data, contract_addr, private_keys, web3s.clone()).await;
 
-    wait_untill_unix().await; // customize unix
+    wait_for_block(web3s.clone()).await;
     
     let mut tasks2 = Vec::new();
     let signed_trans = signed_trans.lock().unwrap();
