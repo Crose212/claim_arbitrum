@@ -12,7 +12,7 @@ pub async fn wait_for_block() {
     let needed_block = U64::from(16890400);
     loop {
         let curr_block = web3s.eth().block_number().await.unwrap();
-        if needed_block < curr_block {
+        if needed_block > curr_block {
             println!("Claim not started yet, current block: {:?}", curr_block);
         } else {
             println!("Claim started");
